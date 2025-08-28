@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poplar: 'PoplarStd';
+  --font-abcmarfa: 'ABCMarfaMonoVariable';
+  --font-helvetica-300: 'HelveticaNeueLight';
+  --font-helvetica-100: 'HelveticaNeueThin';
+  --font-myriad: 'MyriadPro';
+
+  --color-wine: #781616;
+  --color-reed: #DB0812;
+  --color-37l: #F9B104;
+  --color-beige: #F5E7D3;
+}
+
+@font-face {
+  font-family: 'PoplarStd';
+  src: url('./assets/fonts/PoplarStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABCMarfaMonoVariable';
+  src: url('./assets/fonts/ABCMarfaMonoVariable-Trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueThin';
+  src: url('./assets/fonts/HelveticaNeueThin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('./assets/fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('./assets/fonts/MyriadPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-black text-white font-sans;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+
+  .btn-primary {
+    @apply bg-transparent border-2 border-reed hover:bg-wine text-reed text-4xl font-poplar py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-amber-600 text-amber-600 hover:bg-beige hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+
+  .parallax-container {
+    @apply h-screen overflow-x-hidden overflow-y-auto;
+    perspective: 1px;
+  }
+
+  .parallax-element {
+    @apply absolute inset-0;
+  }
+
+  .parallax-back {
+    transform: translateZ(-1px) scale(2);
+  }
+}
