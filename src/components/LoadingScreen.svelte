@@ -44,7 +44,7 @@
         >
           <img
             class="w-64 h-64"
-            src="/src/assets/gif/baile.gif"
+            src="/assets/gif/baile.gif"
             alt="37Lenguas"
           />
         </div>
